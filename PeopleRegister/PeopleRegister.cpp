@@ -1,31 +1,26 @@
 #include <iostream>
-#include "Functions.h"
-#include "Classes.h"
+#include "Package.h"
 using std::cout;
 
 int main(){
-//    int size = FileSize();
-    int size = 5;
-    people* peopleCard = new people[size+1];
-//    FileRead(peopleCard, size);
+    int size = FileSize();
+    People* peopleCard = new People[size+1];
+    FileRead(peopleCard, size);
 
     int option = 0;
     do {
-        option = menu();
+        option = Menu();
         switch (option) {
-        case 1: funcAdd(peopleCard, size);
+        case 1: FuncAddPeople(peopleCard, size);
             break;
-        case 2: funcDel(peopleCard, size);
+        case 2: FuncDelPeople(peopleCard, size);
             break;
-        case 3: funcShow(peopleCard, size);
+        case 3: FuncShowPeople(peopleCard, size);
             break;
         };
     } while (option != 0);
 
     delete[]peopleCard;
     peopleCard = NULL;
-
-    cout << "press any key to leave";
-    system("pause>0");
     return 0;
 }

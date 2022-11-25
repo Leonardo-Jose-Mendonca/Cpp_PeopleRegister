@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Classes.h"
+#include "Package.h"
+using std::cout;
 
-void FileRead(people* person, int size) {
+void FileRead(People* person, int size) {
     std::string line;
     std::fstream FILE_PEOPLE;
-    FILE_PEOPLE.open("People_Register.txt", std::ios::in);
+    FILE_PEOPLE.open("Memory.txt", std::ios::in);
     if (FILE_PEOPLE.is_open()) {
         for (int i = 0; i < size; i++) {
             std::getline(FILE_PEOPLE, line);
@@ -17,13 +18,13 @@ void FileRead(people* person, int size) {
     FILE_PEOPLE.close();
 }
 
-void FileWrite(people* person, int size) {}
+void FileWrite(People* person, int size) {}
 
 int FileSize() {
     int size = 0;
     std::string line;
     std::fstream FILE_PEOPLE;
-    FILE_PEOPLE.open("People_Register.txt", std::ios::in);
+    FILE_PEOPLE.open("Memory.txt", std::ios::in);
     if (FILE_PEOPLE.is_open()) {
         while (std::getline(FILE_PEOPLE, line))
             size++;

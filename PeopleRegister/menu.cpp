@@ -2,7 +2,7 @@
 using std::cout;
 using std::cin;
 
-int menu() {
+int Menu() {
     int option = 0;
     do {
         cout << "------------MENU------------\n";
