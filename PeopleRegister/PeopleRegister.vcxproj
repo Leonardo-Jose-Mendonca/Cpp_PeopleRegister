@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="File.cpp" />
     <ClCompile Include="FuncAdd.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="funcDel.cpp" />

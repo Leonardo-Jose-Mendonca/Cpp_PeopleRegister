@@ -4,10 +4,12 @@
 using std::cout;
 
 int main(){
-    int size = 5;   //size is the quantity of people that can be incremented in this register
-    people* peopleCard = new people[size];
-    int option = 0;
+//    int size = FileSize();
+    int size = 5;
+    people* peopleCard = new people[size+1];
+//    FileRead(peopleCard, size);
 
+    int option = 0;
     do {
         option = menu();
         switch (option) {
