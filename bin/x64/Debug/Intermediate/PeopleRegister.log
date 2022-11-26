@@ -1,4 +1,18 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: o diretório Intermediate não termina com uma barra à direita. Essa instância de compilação adicionará a barra conforme necessário para permitir a avaliação adequada do Diretório Intermediate.
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: o diretório Output não termina com uma barra à direita. Essa instância de compilação adicionará a barra conforme necessário para permitir a avaliação adequada do Diretório Output.
+  Decode.cpp
+C:\Users\ljmen\DOC\Code\C++ code\PeopleRegister\PeopleRegister\Decode.cpp(85,23): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\ljmen\DOC\Code\C++ code\PeopleRegister\PeopleRegister\Decode.cpp(86,33): warning C4244: 'argumento': conversão de 'float' para 'const _Elem', possível perda de dados
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\ljmen\DOC\Code\C++ code\PeopleRegister\PeopleRegister\Decode.cpp(89,9): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
+  File.cpp
+  FuncAddPeople.cpp
+  FuncDelPeople.cpp
+  FuncShowPeople.cpp
+  Menu.cpp
   PeopleRegister.cpp
+  Gerando Código...
   PeopleRegister.vcxproj -> C:\Users\ljmen\DOC\Code\C++ code\PeopleRegister\bin\x64\Debug\PeopleRegister.exe

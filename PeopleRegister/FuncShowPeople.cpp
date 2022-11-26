@@ -1,10 +1,9 @@
-#include <iostream>
 #include "Package.h"
-using std::cout;
 
 void FuncShowPeople(People* person, int size) {
+    string name;
     for (int i = 0; i < size; i++) {
-        if (person[i].CheckPerson())
+        if (person[i].CheckPerson(name))
             person[i].ShowPerson();
         else {
             if (i == 0)

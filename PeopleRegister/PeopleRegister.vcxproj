@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Decode.cpp" />
     <ClCompile Include="File.cpp" />
     <ClCompile Include="FuncAddPeople.cpp" />
     <ClCompile Include="Menu.cpp" />

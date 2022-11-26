@@ -1,15 +1,11 @@
-#include <iostream>
-#include <string>
 #include "Package.h"
-using std::string;
-using std::cout;
-using std::cin;
 
 void FuncDelPeople(People* person, int size) {
     int selection = 0;
     int end = 0;
+    string _name;
     for (int i = 0; i < size; i++) {
-        if (person[i].CheckPerson()) {
+        if (person[i].CheckPerson(_name)) {
             cout << i << " - ";
             person[i].ShowPerson();
         }
@@ -35,10 +31,12 @@ void FuncDelPeople(People* person, int size) {
     string name = "";
     int age = 0;
     for (int i = selection; i < end; i++) {
-        person[i + 1].GetPerson(&name, &age);
-        person[i].InsertPerson(name, age);
+        person[i + 1].GetName(name);
+        person[i].InsertName(name);
+        person[i].InsertAge(age);
     }
-    person[end].InsertPerson("none", 0);
+    person[end].InsertName("none");
+    person[end].InsertAge(0);
     cout << "Person DELETED";
     system("pause>0");
     system("cls");

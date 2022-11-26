@@ -1,35 +1,38 @@
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "Package.h"
-using std::cout;
 
-void FileRead(People* person, int size) {
+void FileRead(string* person) {
     std::string line;
     std::fstream FILE_PEOPLE;
     FILE_PEOPLE.open("Memory.txt", std::ios::in);
-    if (FILE_PEOPLE.is_open()) {
-        for (int i = 0; i < size; i++) {
-            std::getline(FILE_PEOPLE, line);
-            cout << line;
-        }
+    int index = 0;
+    while (std::getline(FILE_PEOPLE, line)) {
+        person[index] = line;
+        index++;
     }
-    else cout << "error";
     FILE_PEOPLE.close();
 }
 
-void FileWrite(People* person, int size) {}
+void FileWrite(string* person, int size) {
+    std::fstream FILE_PEOPLE;
+    FILE_PEOPLE.open("Memory.txt", std::ios::out);
+    FILE_PEOPLE.close();
+    FILE_PEOPLE.open("Memory.txt", std::ios::app);
+    int index = 0;
+    while (index < size) {
+        FILE_PEOPLE << person[index] << "\n";
+        index++;
+    }
+    FILE_PEOPLE.close();
+}
 
 int FileSize() {
     int size = 0;
     std::string line;
     std::fstream FILE_PEOPLE;
     FILE_PEOPLE.open("Memory.txt", std::ios::in);
-    if (FILE_PEOPLE.is_open()) {
+    if (FILE_PEOPLE.is_open())
         while (std::getline(FILE_PEOPLE, line))
             size++;
-    }
-    else cout << "error";
     FILE_PEOPLE.close();
     return size;
 }

@@ -1,12 +1,13 @@
-#include <iostream>
 #include "Package.h"
-using std::cout;
 
-int main(){
+int main() {
     int size = FileSize();
-    People* peopleCard = new People[size+1];
-    FileRead(peopleCard, size);
-
+    People* peopleCard = new People[size];
+    string* peopleList = new string[size];
+    FileRead(peopleList);
+    Decode_List_to_Object(peopleCard, peopleList, size);
+//    delete[] peopleList;
+//    peopleList = NULL;
     int option = 0;
     do {
         option = Menu();
@@ -19,8 +20,11 @@ int main(){
             break;
         };
     } while (option != 0);
+//    string* peopleList = new string[size];
 
-    delete[]peopleCard;
-    peopleCard = NULL;
+    Decode_Object_to_List(peopleCard, peopleList, size);
+    FileWrite(peopleList, size);
+    delete[] peopleList;
+    peopleList = NULL;
     return 0;
 }

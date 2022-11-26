@@ -1,9 +1,8 @@
-#include <iostream>
-using std::cout;
-using std::cin;
+#include "Package.h"
 
 int Menu() {
     int option = 0;
+    system("cls");
     do {
         cout << "------------MENU------------\n";
         cout << "0 - Exit\n";
