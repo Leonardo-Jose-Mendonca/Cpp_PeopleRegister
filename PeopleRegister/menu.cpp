@@ -1,18 +1,21 @@
 #include "Package.h"
 
 int Menu() {
-    int option = 0;
+    unsigned int option = 0;
     system("cls");
     do {
         cout << "------------MENU------------\n";
         cout << "0 - Exit\n";
-        cout << "1 - Insert people\n";
-        cout << "2 - Delete people\n";
-        cout << "3 - Show people\n";
+        cout << "1 - ADD    a person\n";
+        cout << "2 - DELETE a person\n";
+        cout << "3 - LIST     people\n";
+        cout << "4 - \n";
+        cout << "5 - \n";
+        cout << "6 - SAVE\n";
         cout << "----------------------------\n";
         cout << "option: ";
-        cin >> option;
+        option = intInput();
         system("cls");
-    } while (!(option >= 0 && option <= 3));
+    } while (!(option >= 0 && option <= 6));
     return option;
 }

@@ -147,6 +147,7 @@
     <ClCompile Include="File.cpp" />
     <ClCompile Include="FuncPeople.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="UserInputs.cpp" />
     <ClCompile Include="PeopleRegister.cpp" />
   </ItemGroup>
   <ItemGroup>

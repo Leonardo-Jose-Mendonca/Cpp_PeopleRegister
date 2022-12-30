@@ -1,8 +1,8 @@
 #include "Package.h"
 
-void Decode_List_to_Object(People* peopleCard, string* peopleList, int size) {
+void Decode_List_to_Object(People* peopleCard, string* peopleList, unsigned int size) {
     string line = " ";
-    for (int i = 0; i < size; i++) {
+    for (unsigned int i = 0; i < size; i++) {
         line = peopleList[i];
         int position = 0;
         while (line[position] != NULL) {
@@ -29,7 +29,7 @@ void Decode_List_to_Object(People* peopleCard, string* peopleList, int size) {
                     if (line[position - 2] == 'g')
                         if (line[position - 3] == 'A') {
                             position++;
-                            int age = 0;
+                            unsigned int age = 0;
                             while (line[position] != ',') {
                                 if (line[position] >= '0' && line[position] <= '9') {
                                     age *= 10;
@@ -71,10 +71,10 @@ void Decode_List_to_Object(People* peopleCard, string* peopleList, int size) {
     }
 }
 
-void Decode_Object_to_List(People* peopleCard, string* peopleList, int size) {
-    for (int i = 0; i < size; i++) {
+void Decode_Object_to_List(People* peopleCard, string* peopleList, unsigned int size) {
+    for (unsigned int i = 0; i < size; i++) {
         string name = "";
-        int age = 0;
+        unsigned int age = 0;
         string s_age = "";
         list<string> hobby = {};
         peopleCard[i].GetName(name);

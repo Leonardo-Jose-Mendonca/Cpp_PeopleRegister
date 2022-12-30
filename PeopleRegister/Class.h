@@ -10,17 +10,17 @@ using std::endl;
 class People {
 private:
     string name;
-    int age;
+    unsigned int age;
     list<string> hobby = {};
 public:
-    People(string Name = "none", int Age = 0) {
+    People(string Name = "none", unsigned int Age = 0) {
         name = Name;
         age = Age;
     }
     void InsertName(string& Name) {
         name = Name;
     }
-    void InsertAge(int& Age) {
+    void InsertAge(unsigned int& Age) {
         age = Age;
     }
     void InsertHobby(string& Hobby) {
@@ -60,7 +60,7 @@ public:
     void GetName(string& nameReference) {
         nameReference = name;
     }
-    void GetAge(int& ageReference) {
+    void GetAge(unsigned int& ageReference) {
         ageReference = age;
     }
     void GetHobby(list<string>& hobbyReference) {

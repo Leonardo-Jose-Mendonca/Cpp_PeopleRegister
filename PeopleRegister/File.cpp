@@ -4,7 +4,7 @@ void FileRead(string* person) {
     std::string line;
     std::fstream FILE_PEOPLE;
     FILE_PEOPLE.open("Memory.txt", std::ios::in);
-    int index = 0;
+    unsigned int index = 0;
     while (std::getline(FILE_PEOPLE, line)) {
         person[index] = line;
         index++;
@@ -12,12 +12,12 @@ void FileRead(string* person) {
     FILE_PEOPLE.close();
 }
 
-void FileWrite(string* person, int size) {
+void FileWrite(string* person, unsigned int size) {
     std::fstream FILE_PEOPLE;
     FILE_PEOPLE.open("Memory.txt", std::ios::out);
     FILE_PEOPLE.close();
     FILE_PEOPLE.open("Memory.txt", std::ios::app);
-    int index = 0;
+    unsigned int index = 0;
     while (index < size) {
         FILE_PEOPLE << person[index] << "\n";
         index++;
@@ -26,7 +26,7 @@ void FileWrite(string* person, int size) {
 }
 
 int FileSize() {
-    int size = 0;
+    unsigned int size = 0;
     std::string line;
     std::fstream FILE_PEOPLE;
     FILE_PEOPLE.open("Memory.txt", std::ios::in);

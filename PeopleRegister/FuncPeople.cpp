@@ -1,18 +1,18 @@
 #include "Package.h"
 
-void FuncDelPeople(People* person, int& size) {
+void FuncDelPeople(People* person, unsigned int& size) {
     if (size == 0) {
         cout << "--EMPTY--";
         system("pause>0");
         return;
     }
-    for (int i = 0; i < size; i++) {
+    for (unsigned int i = 0; i < size; i++) {
         cout << i+1 << " - ";
         person[i].ShowPerson();
     }
-    int selection = 0;
+    unsigned int selection = 0;
     cout << "Select the person's index number to be DELETED or '0' to leave: ";
-    cin >> selection;
+    selection = intInput();
     if (selection == 0){
         cout << "CANCELLED";
         system("pause>0");
@@ -24,12 +24,12 @@ void FuncDelPeople(People* person, int& size) {
         return;
     }
     string name = "";
-    int age = 0;
+    unsigned int age = 0;
     list<string> hobby = {};
     string hobby_s = "";
     selection--;
-    int end = size - 1;
-    for (int i = selection; i < end; i++) {
+    unsigned int end = size - 1;
+    for (unsigned int i = selection; i < end; i++) {
         person[i].DeleteName();
         person[i].DeleteAge();
         while (person[i].DeleteHobby()) {}
@@ -52,7 +52,7 @@ void FuncDelPeople(People* person, int& size) {
     system("cls");
 }
 
-void FuncAddPeople(People* person, int& size, int& max_size, bool& reStart) {
+void FuncAddPeople(People* person, unsigned int& size, unsigned int& max_size, bool& reStart) {
     if (size == max_size) {
         cout << "reached the maximum size.. System will restart to free some space up.. Press any key..";
         system("pause>0");
@@ -62,13 +62,13 @@ void FuncAddPeople(People* person, int& size, int& max_size, bool& reStart) {
 
     string existingName = "";
     string name = "";
-    int age = 0;
+    unsigned int age = 0;
     string hobby = "";
 
     cout << "__Sing Up__" << endl;
     cout << "name: ";
-    cin >> name;
-    for (int i = 0; i < size; i++) {
+    name = stringInput();
+    for (unsigned int i = 0; i < size; i++) {
         person[i].GetName(existingName);
         if (existingName == name) {
             cout << "--NAME ALREADY EXIST--";
@@ -77,10 +77,10 @@ void FuncAddPeople(People* person, int& size, int& max_size, bool& reStart) {
         }
     }
     cout << "age: ";
-    cin >> age;
+    age = intInput();
     person[size].InsertName(name);
     person[size].InsertAge(age);
-    int numberHobby = 0;
+    unsigned int numberHobby = 0;
     do {
         numberHobby++;
         if (numberHobby == 1)
@@ -91,7 +91,7 @@ void FuncAddPeople(People* person, int& size, int& max_size, bool& reStart) {
             cout << "insert 3rd hobby or type 'out' and press ENTER to leave: ";
         else
             cout << "insert " << numberHobby << "th hobby or type 'out' and press ENTER to leave: ";
-        cin >> hobby;
+        hobby = stringInput();
         if (hobby != "out")
             person[size].InsertHobby(hobby);
     } while (hobby != "out");
@@ -100,13 +100,13 @@ void FuncAddPeople(People* person, int& size, int& max_size, bool& reStart) {
     system("pause>0");
 }
 
-void FuncShowPeople(People* person, int& size) {
+void FuncShowPeople(People* person, unsigned int& size) {
     if (size == 0) {
         cout << "--EMPTY--";
         system("pause>0");
         return;
     }
-    for (int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < size; i++)
         person[i].ShowPerson();
     system("pause>0");
 }

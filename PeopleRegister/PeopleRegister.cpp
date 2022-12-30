@@ -5,15 +5,15 @@ int main() {
     do {
         reStart = false;
         const int incrementation = 2;
-        int file_size = FileSize();
-        int max_size = file_size + incrementation;
+        unsigned int file_size = FileSize();
+        unsigned int max_size = file_size + incrementation;
         People* peopleCard = new People[max_size];
         string* peopleList = new string[file_size];
         FileRead(peopleList);
         Decode_List_to_Object(peopleCard, peopleList, file_size);
         delete[] peopleList;
         peopleList = NULL;
-        int option = 0;
+        unsigned int option = 0;
         do {
             option = Menu();
             switch (option) {
@@ -22,6 +22,15 @@ int main() {
             case 2: FuncDelPeople(peopleCard, file_size);
                 break;
             case 3: FuncShowPeople(peopleCard, file_size);
+                break;
+            case 4: ; //Edit People
+                break;
+            case 5: ; //Search People
+                break;
+            case 6:
+                reStart = true;
+                cout << "SAVING CHANGES.. press any key.. !";
+                system("pause>0");
                 break;
             };
         } while (option != 0 && !reStart);
