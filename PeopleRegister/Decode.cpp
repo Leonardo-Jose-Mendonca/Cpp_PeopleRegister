@@ -93,8 +93,10 @@ void Decode_Object_to_List(People* peopleCard, string* peopleList, int size) {
         peopleList[i] = "Name: " + name + ", Age: " + s_age + ", Hobby: ";
         bool flagComma = false;
         for (string s : hobby) {
-            if (flagComma == true)
+            if (flagComma == true) {
                 peopleList[i].push_back(',');
+                peopleList[i].push_back(' ');
+            }
             int j = 0;
             while (j < s.length()) {
                 peopleList[i].push_back(s[j]);
