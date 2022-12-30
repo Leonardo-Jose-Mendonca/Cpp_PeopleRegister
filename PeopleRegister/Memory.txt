@@ -1,6 +1,4 @@
-Name: Daiana, Age: 35, Hobby: drink, party, love her husband.
-Name: Mickaell Pimenta, Age: 14, Hobby: football, play drums, read.
-Name: Thiago Henrique Pimenta, Age: 12, Hobby: play games on cellphone, basketball.
-Name: , Age: 10, Hobby: swim.
-Name: Ana Carolina, Age: 40, Hobby: .
-Name: Lazaro Mendonca Jr., Age: , Hobby: wood hand maker.
+Name: Daiana, Age: 35, Hobby: drink,party,love her husband.
+Name: Mickaell Pimenta, Age: 14, Hobby: football,play drums,read.
+Name: Thiago Henrique Pimenta, Age: 12, Hobby: play games on cellphone,basketball.
+Name: Ana Carolina, Age: 40, Hobby: swim.

@@ -21,13 +21,7 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="FuncAddPeople.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="FuncDelPeople.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="FuncShowPeople.cpp">
+    <ClCompile Include="FuncPeople.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="File.cpp">

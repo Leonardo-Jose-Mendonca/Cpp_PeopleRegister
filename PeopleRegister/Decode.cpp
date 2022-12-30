@@ -53,7 +53,7 @@ void Decode_List_to_Object(People* peopleCard, string* peopleList, int size) {
                                             continue;
                                         }
                                         spaceTag = false;
-                                        if (line[position != ','])
+                                        if (line[position] != ',')
                                             hobby.push_back(line[position]);
                                         else {
                                             peopleCard[i].InsertHobby(hobby);
@@ -62,7 +62,8 @@ void Decode_List_to_Object(People* peopleCard, string* peopleList, int size) {
                                         }
                                         position++;
                                     }
-                                    peopleCard[i].InsertHobby(hobby);
+                                    if(hobby != "")
+                                        peopleCard[i].InsertHobby(hobby);
                                 }
             }
             position++;

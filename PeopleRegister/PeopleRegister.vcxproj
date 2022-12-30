@@ -145,10 +145,8 @@
   <ItemGroup>
     <ClCompile Include="Decode.cpp" />
     <ClCompile Include="File.cpp" />
-    <ClCompile Include="FuncAddPeople.cpp" />
+    <ClCompile Include="FuncPeople.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="FuncDelPeople.cpp" />
-    <ClCompile Include="FuncShowPeople.cpp" />
     <ClCompile Include="PeopleRegister.cpp" />
   </ItemGroup>
   <ItemGroup>

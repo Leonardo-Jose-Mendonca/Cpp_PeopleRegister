@@ -17,17 +17,28 @@ public:
         name = Name;
         age = Age;
     }
-    void InsertName(string Name) {
+    void InsertName(string& Name) {
         name = Name;
     }
-    void InsertAge(int Age) {
+    void InsertAge(int& Age) {
         age = Age;
     }
-    void InsertHobby(string Hobby) {
+    void InsertHobby(string& Hobby) {
         hobby.push_front(Hobby);
     }
-    void DeleteHobby() {
-        hobby.pop_front();
+    void DeleteName() {
+        name = "";
+    }
+    void DeleteAge() {
+        age = 0;
+    }
+    bool DeleteHobby() {
+        if (hobby.empty())
+            return false;   //empty
+        else {
+            hobby.pop_front();
+            return true;
+        }
     }
     void ShowPerson() {
         cout << "Name: " << name << ", Age: " << age << ", Hobby: ";
@@ -40,11 +51,11 @@ public:
         }
         cout << "." << endl;
     }
-    bool CheckPerson(string Name) {
-        if (name == Name)
-            return true;
-        else
+    bool CheckPerson() {
+        if (name == "" && age == 0 && hobby.empty())
             return false;
+        else
+            return true;
     }
     void GetName(string& nameReference) {
         nameReference = name;
