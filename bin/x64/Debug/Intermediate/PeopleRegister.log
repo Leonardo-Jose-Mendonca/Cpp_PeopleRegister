@@ -1,4 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: o diretório Intermediate não termina com uma barra à direita. Essa instância de compilação adicionará a barra conforme necessário para permitir a avaliação adequada do Diretório Intermediate.
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: o diretório Output não termina com uma barra à direita. Essa instância de compilação adicionará a barra conforme necessário para permitir a avaliação adequada do Diretório Output.
-  UserInputs.cpp
+  PeopleRegister.cpp
   PeopleRegister.vcxproj -> C:\Users\ljmen\DOC\Code\C++ code\PeopleRegister\bin\x64\Debug\PeopleRegister.exe

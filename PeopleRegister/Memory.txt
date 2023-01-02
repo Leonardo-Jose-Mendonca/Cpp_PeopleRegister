@@ -1,11 +1,4 @@
-Name: kaell, Age: 14, Hobby: soccer, game.
-Name: Thi, Age: 12, Hobby: code.
-Name: next, Age: 4, Hobby: testing.
-Name: J, Age: 50, Hobby: 1.
-Name: z, Age: 1, Hobby: 11.
-Name: x, Age: 2, Hobby: 22.
-Name: c, Age: 3, Hobby: 33.
-Name: Leo, Age: 36, Hobby: beer, code.
-Name: Iza, Age: 65, Hobby: family, work.
-Name: Hugo, Age: 34, Hobby: .
-Name: 123, Age: 456, Hobby: .
+Name: Minja Go, Age: 2, Hobby: .
+Name: New Guy, Age: 89, Hobby: run.
+Name: Junior M, Age: 36, Hobby: work.
+Name: Friends of mine, Age: 44, Hobby: kick a ball, go to the shopping, eat, cook, sleep, run.

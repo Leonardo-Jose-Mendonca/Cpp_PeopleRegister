@@ -54,7 +54,7 @@ void FuncDelPeople(People* person, unsigned int& size) {
 
 void FuncAddPeople(People* person, unsigned int& size, unsigned int& max_size, bool& reStart) {
     if (size == max_size) {
-        cout << "reached the maximum size.. System will restart to free some space up.. Press any key..";
+        cout << "Reached the maximum size.. System will restart to free some space up.. Press any key..";
         system("pause>0");
         reStart = true;
         return;
@@ -66,12 +66,18 @@ void FuncAddPeople(People* person, unsigned int& size, unsigned int& max_size, b
     string hobby = "";
 
     cout << "__Sing Up__" << endl;
+    cout << "Insert the name or type 'out' and press ENTER to leave:\n";
     cout << "name: ";
     name = stringInput();
     for (unsigned int i = 0; i < size; i++) {
         person[i].GetName(existingName);
         if (existingName == name) {
             cout << "--NAME ALREADY EXIST--";
+            system("pause>0");
+            return;
+        }
+        else if (name == "out") {
+            cout << "--CANCELLED--";
             system("pause>0");
             return;
         }

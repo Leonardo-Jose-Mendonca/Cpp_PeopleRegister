@@ -32,23 +32,11 @@ unsigned int intInput() {
 }
 
 string stringInput() {
-	unsigned int arraySize = 50;
-	char* strUserValue = new char[arraySize];
-	for (unsigned int i = 0; i < arraySize; i++)
-		strUserValue[i] = NULL;
-	cin >> strUserValue;
-	string strValue = {};
-
-	for (unsigned int i = 0; i < arraySize; i++) {
-		if (strUserValue[i] == NULL)
-			break;
-		strValue.push_back(strUserValue[i]);
-		cout << i << "-";
-	}
-
-	system("pause>0");
-
-	delete[] strUserValue;
-	strUserValue = NULL;
+	const unsigned int arraySize = 50;
+	char arrayUserValue[arraySize];
+	do {
+		cin.getline(arrayUserValue, arraySize);
+	} while (strlen(arrayUserValue) == 0);
+	char* strValue = arrayUserValue;
 	return strValue;
 }
